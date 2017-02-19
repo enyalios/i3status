@@ -10,10 +10,10 @@ void print_file(yajl_gen json_gen, char *buffer, const char *title, const char *
     char *outwalk = buffer;
     outwalk[0] = '\0';
 
-    if(title != NULL)
+    if (title != NULL)
         INSTANCE(title);
 
     slurp(path, outwalk, 4096);
-    outwalk += (strnlen(outwalk, 4096-1) + 1);
+    outwalk += (strnlen(outwalk, 4096 - 1) + 1);
     OUTPUT_FULL_TEXT(buffer);
 }
